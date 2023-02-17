@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Login successful, redirect to the dashboard page
         $_SESSION['username'] = $username;
-        header('Location: dashboard.php');
+        header('Location: index.php');
         exit;
 
     } else {
