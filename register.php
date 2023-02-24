@@ -1,5 +1,3 @@
-<?php include('server.php') ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,19 +8,15 @@
 	<div class="container">
 		<h1>Registreren</h1>
 		<form method="post" action="register.php">
-			<?php include('errors.php'); ?>
 
 			<label for="username">Gebruikersnaam:</label>
-			<input type="text" id="username" name="username" value="<?php echo $username; ?>" required>
-
-			<label for="email">E-mail:</label>
-			<input type="email" id="email" name="email" value="<?php echo $email; ?>" required>
+			<input type="text" id="username" name="username" required><br>
 
 			<label for="password">Wachtwoord:</label>
-			<input type="password" id="password" name="password_1" required>
+			<input type="password" id="password" name="password_1" required><br>
 
 			<label for="password">Herhaal wachtwoord:</label>
-			<input type="password" id="password" name="password_2" required>
+			<input type="password" id="password" name="password_2" required><br>
 
 			<button type="submit" name="reg_user">Registreren</button>
 		</form>
