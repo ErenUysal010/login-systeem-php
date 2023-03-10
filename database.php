@@ -15,6 +15,7 @@ try {
     echo 'Error: ' . $e->getMessage();
     exit;
 }
+?>
 
 /*
 -------------------MySQL database code--------------------
@@ -32,3 +33,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ----------------------------------------------------------*/
+<?php
+$sname = "localhost";
+$unmae = "root";
+$user = 'username';
+$password = '';
+
+$db_name = "test_db";
+
+$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+
+if(!$conn){
+  echo "Connecttion failed!";
+}
+
+?>
