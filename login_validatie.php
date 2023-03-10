@@ -32,4 +32,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+//--------------------------------------------------------new code----------------------
+function SetPassword($password){
+    $this->password = $password;
+}
+
+function GetPassword(){
+    return $this->password;
+}
+
+function ValidateUser(){
+    $errors=[];
+
+    if (empty($this->username)){
+        array_push($errors, "Invalid username");
+    } else if (empty($this->password)){
+        array_push($errors, "Invalid password");
+    }
+
+    return $errors;
+}
+
 ?>
